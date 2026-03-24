@@ -1,6 +1,0 @@
-dept_id,dept_name,manager_id
-D01,Engineering,E101
-D02,Marketing,E102
-D03,Human Resources,E104
-D04,Sales,NULL
-D05,Data Science,E105
