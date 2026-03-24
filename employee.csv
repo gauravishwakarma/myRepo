@@ -1,0 +1,6 @@
+emp_id,first_name,last_name,dept_id,loc_id,hire_date
+E101,Alice,Chen,D01,L01,2022-03-15
+E102,Marcus,Jordan,D02,L02,2021-06-01
+E103,Sarah,Smithe,D01,L01,2023-01-10
+E104,Vikram,Singh,D03,L03,2020-11-20
+E105,Elena,Rodriguez,D02,L02,2022-08-05
