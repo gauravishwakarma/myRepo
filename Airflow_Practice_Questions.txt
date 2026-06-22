@@ -1,0 +1,110 @@
+Airflow Practice Questions & Scenarios
+
+1.  Linear Pipeline DAG Scenario: Start → Extract → Transform → Load →
+    End
+
+Tasks: - extract_data - transform_data - load_data
+
+Practice Concepts: - DAG creation - BashOperator - Task dependencies
+(>>)
+
+------------------------------------------------------------------------
+
+2.  Parallel Execution DAG
+
+Scenario: → Customer_Data → Start → → Merge → End → Product_Data →
+
+Tasks: - extract_customer - extract_product - merge_data
+
+Practice Concepts: - Parallel tasks - Fan-out/Fan-in
+
+------------------------------------------------------------------------
+
+3.  Branching DAG
+
+Scenario: If sales > 10000: Start → Check_Sales → Generate_Report → End
+
+Else: Start → Check_Sales → Send_Notification → End
+
+Practice Concepts: - BranchPythonOperator - Conditional workflows
+
+------------------------------------------------------------------------
+
+4.  Retry Failure DAG
+
+Scenario: Start → API_Call → Process_Data → End
+
+Configuration: - retries=3 - retry_delay=1 minute
+
+Practice Concepts: - Retries - Failure handling
+
+------------------------------------------------------------------------
+
+5.  Trigger Rule DAG
+
+Scenario: → Task_A → Start → → End → Task_B →
+
+If Task_A fails but Task_B succeeds: trigger_rule=“one_success”
+
+Practice Concepts: - Trigger rules - Fault tolerance
+
+------------------------------------------------------------------------
+
+6.  Banking ETL Pipeline
+
+Scenario: Start ↓ Read_Customer_File ↓ Validate_Data ↓ Transform_Data ↓
+Load_Hive ↓ Generate_Report ↓ End
+
+Practice Concepts: - Real-world BFSI pipeline - Multi-stage ETL
+
+------------------------------------------------------------------------
+
+7.  Fraud Detection Pipeline
+
+Scenario: Start ↓ Read_Transactions ↓ Standardize_Data ↓
+Apply_Fraud_Rules ↓ Generate_Alerts ↓ Send_Email ↓ End
+
+Practice Concepts: - Fraud detection workflow - Alert generation
+
+------------------------------------------------------------------------
+
+8.  PySpark Job Orchestration
+
+Scenario: Start ↓ Spark_Job_1 ↓ Spark_Job_2 ↓ Spark_Job_3 ↓ End
+
+Use: - SparkSubmitOperator
+
+Practice Concepts: - Spark integration - Production orchestration
+
+------------------------------------------------------------------------
+
+9.  Daily + Monthly Workflow
+
+Scenario: Daily Load ↓ Monthly Aggregation ↓ Report Generation
+
+Practice Concepts: - Cron scheduling - Time-based pipelines
+
+------------------------------------------------------------------------
+
+10. Dynamic Branching DAG
+
+Scenario: → Azure → Start → Check_Env → AWS → → GCP →
+
+Practice Concepts: - Dynamic routing - Environment-based execution
+
+------------------------------------------------------------------------
+
+Interview-Level Challenge
+
+Create the following DAG:
+
+                         → Fraud_Check →
+
+Start → Read_File → Validate → DQ_Check → ↓ Merge_Result ↓ Send_Alert ↓
+End
+
+Requirements: - Use BranchPythonOperator - Use parallel tasks - Use
+trigger_rule - Add retries - Schedule every 5 minutes
+
+This challenge covers most common Airflow interview concepts for Data
+Engineers.
